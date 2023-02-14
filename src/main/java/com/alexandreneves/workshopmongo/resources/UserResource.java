@@ -1,6 +1,7 @@
 package com.alexandreneves.workshopmongo.resources;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -26,7 +27,7 @@ public class UserResource {
 		User alex  = new User("1", "Alex Green", "alex@gmail.com");
 		List<User> list = new ArrayList<>();
 		list.addAll(Arrays.asList(maria, alex));*/
-		List<User> list = service.findAll();
+		List<User> list = service.findAll();		
 		return ResponseEntity.ok().body(list);
 	}
 }
