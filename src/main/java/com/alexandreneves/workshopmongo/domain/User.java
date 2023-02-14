@@ -3,10 +3,18 @@ package com.alexandreneves.workshopmongo.domain;
 import java.io.Serializable;
 import java.util.Objects;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+//a notação abaixo é o equivalente a entidade no banco tradicional
+//a indicação da coleção (equivalente a tabela) é opcional, pois... 
+//por padrão, assume-se o nome da classe em minúsculo
+@Document(collection="user")
 public class User implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	
+	@Id
 	private String id;
 	private String name;
 	private String email;
