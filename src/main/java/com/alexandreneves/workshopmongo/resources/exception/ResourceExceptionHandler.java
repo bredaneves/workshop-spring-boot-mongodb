@@ -8,7 +8,9 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 
 import com.alexandreneves.workshopmongo.services.exception.ObjectNotFoundException;
 
+//diferente do Github, porém esse não funciona >> import javax.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletRequest;
+
 
 //notação abaixo indica que essa classe é responsável por tratar possíveis exceções
 @ControllerAdvice
